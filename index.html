@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Languaje Select - Battle Of The Bands</title>
     <style>
-       @font-face {
+        @font-face {
             font-family: 'Stovetop';
             src: url('./stovetop.woff2') format('woff2'),
                  url('./stovetop.ttf') format('truetype');
@@ -39,9 +39,9 @@
             max-width: 400px;
             width: 100%;
         }
-   h1 {
+        h1 {
             font-family: 'Stovetop', sans-serif;
-            font-size: 24px;
+            font-size: 32px;
             margin-bottom: 25px;
             text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
             letter-spacing: 1px;
@@ -60,10 +60,15 @@
             cursor: pointer;
             outline: none;
         }
+        select option {
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: normal;
+        }
         button {
+            font-family: 'Stovetop', sans-serif;
             width: 100%;
             padding: 12px;
-            font-size: 16px;
+            font-size: 20px; 
             font-weight: bold;
             color: white;
             background-color: #0077b6;
@@ -72,6 +77,7 @@
             cursor: pointer;
             transition: background 0.2s ease, transform 0.1s ease;
             box-shadow: 0 4px 15px rgba(0, 119, 182, 0.4);
+            letter-spacing: 1px;
         }
         button:hover {
             background-color: #0096c7;

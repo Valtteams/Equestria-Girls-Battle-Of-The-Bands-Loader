@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Idioma - Equestria Girls</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4a154b 0%, #1a051c 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .launcher-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            border: 2px solid #ff00a0;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: white;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 25px;
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff00a0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            box-shadow: 0 4px 15px rgba(255, 0, 160, 0.4);
+        }
+        button:hover {
+            background-color: #e0008c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="launcher-card">
+        <h1>🌐 SELECCIONA TU IDIOMA</h1>
+        
+        <select id="game-lang">
+            <option value="es_MX">Español (Latinoamérica)</option>
+            <option value="es_ES">Español (España)</option>
+            <option value="en_US">English (United States)</option>
+            <option value="pt_BR">Português (Brasil)</option>
+            <option value="fr_FR">Français (France)</option>
+        </select>
+
+        <button onclick="launchGame()">JUGAR / PLAY</button>
+    </div>
+
+    <script>
+        function launchGame() {
+            const selectedLang = document.getElementById('game-lang').value;
+            const baseUrl = "https://www.hasbro.com/common/assets/html5/EquestriaGirls/Battle_Of_Bands_Dec1/index.html";
+            
+            window.location.href = `${baseUrl}?locale=${selectedLang}`;
+        }
+    </script>
+
+</body>
+</html>

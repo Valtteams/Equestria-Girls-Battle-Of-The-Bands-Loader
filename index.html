@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Languaje Select - Battle Of The Bands</title>
     <style>
+       @font-face {
+            font-family: 'Stovetop';
+            src: url('./stovetop.woff2') format('woff2'),
+                 url('./stovetop.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Stovetop', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-image: url('./title.jpg');
             background-size: cover;
             background-position: center;
@@ -31,7 +39,8 @@
             max-width: 400px;
             width: 100%;
         }
-        h1 {
+   h1 {
+            font-family: 'Stovetop', sans-serif;
             font-size: 24px;
             margin-bottom: 25px;
             text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
